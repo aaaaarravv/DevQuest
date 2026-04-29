@@ -1,0 +1,290 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", "system-ui", sans-serif;
+}
+
+@layer base {
+  :root, .theme-midnight {
+    --brand-hue: 220;
+    --brand-sat: 100%;
+    --brand-lit: 60%;
+    
+    --bg-hue: 222;
+    --bg-sat: 47%;
+    --bg-lit: 4%;
+
+    --panel-hue: 222;
+    --panel-sat: 47%;
+    --panel-lit: 7%;
+
+    --accent-blue: hsl(var(--brand-hue), var(--brand-sat), var(--brand-lit));
+    --accent-purple: hsl(270, 95%, 75%);
+    --accent-indigo: hsl(240, 90%, 70%);
+    
+    --color-dark-bg: hsl(var(--bg-hue), var(--bg-sat), var(--bg-lit));
+    --color-dark-panel: hsl(var(--panel-hue), var(--panel-sat), var(--panel-lit));
+    --color-dark-border: hsl(var(--bg-hue), var(--bg-sat), 15%);
+    --color-text-primary: hsl(var(--bg-hue), 20%, 98%);
+    --color-text-secondary: hsl(var(--bg-hue), 15%, 70%);
+    --color-accent-text: #ffffff;
+
+    --neon-glow: hsla(var(--brand-hue), var(--brand-sat), var(--brand-lit), 0.4);
+    
+    /* Legacy mappings */
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+  .theme-cyberpunk {
+    --brand-hue: 180;
+    --brand-sat: 100%;
+    --brand-lit: 50%;
+    
+    --bg-hue: 260;
+    --bg-sat: 50%;
+    --bg-lit: 3%;
+
+    --panel-hue: 260;
+    --panel-sat: 40%;
+    --panel-lit: 6%;
+
+    --accent-blue: hsl(180, 100%, 50%);
+    --accent-purple: hsl(300, 100%, 50%);
+    --accent-indigo: hsl(80, 100%, 50%);
+    
+    --color-dark-bg: hsl(var(--bg-hue), var(--bg-sat), var(--bg-lit));
+    --color-dark-panel: hsl(var(--panel-hue), var(--panel-sat), var(--panel-lit));
+    --color-dark-border: hsl(var(--brand-hue), 100%, 20%);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: hsl(var(--brand-hue), 50%, 70%);
+    --color-accent-text: #000000;
+
+    --neon-glow: hsla(var(--brand-hue), 100%, 50%, 0.5);
+
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+  .theme-emerald {
+    --brand-hue: 150;
+    --brand-sat: 80%;
+    --brand-lit: 50%;
+    
+    --bg-hue: 160;
+    --bg-sat: 40%;
+    --bg-lit: 3%;
+
+    --panel-hue: 160;
+    --panel-sat: 30%;
+    --panel-lit: 6%;
+
+    --accent-blue: hsl(150, 80%, 50%);
+    --accent-purple: hsl(45, 100%, 60%); 
+    --accent-indigo: hsl(140, 60%, 40%);
+    
+    --color-dark-bg: hsl(var(--bg-hue), var(--bg-sat), var(--bg-lit));
+    --color-dark-panel: hsl(var(--panel-hue), var(--panel-sat), var(--panel-lit));
+    --color-dark-border: hsla(var(--brand-hue), 80%, 50%, 0.2);
+    --color-text-primary: hsl(var(--brand-hue), 20%, 98%);
+    --color-text-secondary: hsl(var(--brand-hue), 10%, 75%);
+    --color-accent-text: #000000;
+
+    --neon-glow: hsla(var(--brand-hue), 80%, 50%, 0.4);
+
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+  .theme-crimson {
+    --brand-hue: 0;
+    --brand-sat: 80%;
+    --brand-lit: 50%;
+    
+    --bg-hue: 0;
+    --bg-sat: 30%;
+    --bg-lit: 4%;
+
+    --panel-hue: 0;
+    --panel-sat: 25%;
+    --panel-lit: 8%;
+
+    --accent-blue: hsl(0, 80%, 60%);
+    --accent-purple: hsl(20, 100%, 60%);
+    --accent-indigo: hsl(340, 70%, 40%);
+    
+    --color-dark-bg: hsl(var(--bg-hue), var(--bg-sat), var(--bg-lit));
+    --color-dark-panel: hsl(var(--panel-hue), var(--panel-sat), var(--panel-lit));
+    --color-dark-border: hsla(var(--brand-hue), 80%, 50%, 0.15);
+    --color-text-primary: hsl(var(--brand-hue), 20%, 98%);
+    --color-text-secondary: hsl(var(--brand-hue), 10%, 75%);
+    --color-accent-text: #ffffff;
+
+    --neon-glow: hsla(var(--brand-hue), 80%, 50%, 0.4);
+
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+  .theme-onyx {
+    --brand-hue: 0;
+    --brand-sat: 0%;
+    --brand-lit: 100%;
+    
+    --bg-hue: 0;
+    --bg-sat: 0%;
+    --bg-lit: 0%;
+
+    --panel-hue: 0;
+    --panel-sat: 0%;
+    --panel-lit: 3%;
+
+    --accent-blue: #ffffff;
+    --accent-purple: #333333;
+    --accent-indigo: #111111;
+    
+    --color-dark-bg: #000000;
+    --color-dark-panel: #080808;
+    --color-dark-border: #1a1a1a;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a1a1aa;
+    --color-accent-text: #000000;
+
+    --neon-glow: rgba(255, 255, 255, 0.2);
+
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+  .theme-nord {
+    --brand-hue: 210;
+    --brand-sat: 60%;
+    --brand-lit: 50%;
+    
+    --bg-hue: 220;
+    --bg-sat: 15%;
+    --bg-lit: 96%;
+
+    --panel-hue: 0;
+    --panel-sat: 0%;
+    --panel-lit: 100%;
+
+    --accent-blue: hsl(210, 80%, 45%);
+    --accent-purple: hsl(280, 40%, 40%);
+    --accent-indigo: hsl(200, 50%, 30%);
+    
+    --color-dark-bg: #f8fafc;
+    --color-dark-panel: #ffffff;
+    --color-dark-border: #e2e8f0;
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #64748b;
+    --color-accent-text: #ffffff;
+
+    --neon-glow: rgba(30, 64, 175, 0.15);
+
+    --color-neon-blue: var(--accent-blue);
+    --color-neon-purple: var(--accent-purple);
+    --color-neon-green: var(--accent-indigo);
+  }
+
+
+  body {
+    @apply bg-[var(--color-dark-bg)] text-[var(--color-text-primary)] font-sans antialiased overflow-x-hidden transition-colors duration-500;
+    background-image: 
+      radial-gradient(circle at 0% 0%, hsla(var(--brand-hue), var(--brand-sat), var(--brand-lit), 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, hsla(var(--brand-hue), var(--brand-sat), var(--brand-lit), 0.05) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .glass-panel {
+    @apply bg-[var(--color-dark-panel)]/80 backdrop-blur-2xl border border-[var(--color-dark-border)] rounded-2xl shadow-2xl;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px hsla(var(--brand-hue), var(--brand-sat), var(--brand-lit), 0.1);
+  }
+
+  .glass-card {
+    @apply bg-[var(--color-dark-panel)]/40 backdrop-blur-lg border border-[var(--color-dark-border)] rounded-xl transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply border-[var(--color-neon-blue)]/30 bg-[var(--color-dark-panel)]/60 -translate-y-1;
+    box-shadow: 0 10px 30px -10px hsla(var(--brand-hue), var(--brand-sat), var(--brand-lit), 0.2);
+  }
+
+  .neon-text-blue {
+    @apply text-[var(--color-neon-blue)] transition-all duration-300;
+    text-shadow: 0 0 15px var(--neon-glow);
+  }
+
+  .neon-text-purple {
+    @apply text-[var(--color-neon-purple)] transition-all duration-300;
+    text-shadow: 0 0 15px hsla(270, 95%, 75%, 0.4);
+  }
+
+  .neon-text-green {
+    @apply text-[var(--color-neon-green)] transition-all duration-300;
+    text-shadow: 0 0 15px hsla(150, 80%, 50%, 0.4);
+  }
+  
+  .game-button {
+    @apply relative overflow-hidden font-bold tracking-wider transition-all duration-300 transform rounded-xl px-6 py-2.5 flex items-center justify-center gap-2;
+    background: linear-gradient(135deg, var(--color-neon-blue), var(--color-neon-purple));
+    @apply text-[var(--color-accent-text)] shadow-lg;
+  }
+
+  
+  .game-button:hover {
+    @apply -translate-y-0.5 scale-[1.02] shadow-xl brightness-110;
+    box-shadow: 0 10px 25px -5px var(--neon-glow);
+  }
+
+  .game-button:active {
+    @apply translate-y-0 scale-[0.98];
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 text-[var(--color-text-secondary)] transition-all duration-300 flex items-center gap-2 rounded-lg;
+  }
+
+  .nav-link.active {
+    @apply text-[var(--color-neon-blue)] bg-[var(--color-neon-blue)]/10;
+  }
+
+  .nav-link:hover:not(.active) {
+    @apply text-[var(--color-text-primary)] bg-[var(--color-dark-border)]/50;
+  }
+
+  .input-field {
+    @apply w-full bg-[var(--color-dark-bg)] border border-[var(--color-dark-border)] rounded-xl p-3 outline-none transition-all duration-300 text-[var(--color-text-primary)];
+  }
+
+  .input-field:focus {
+    @apply border-[var(--color-neon-blue)]/50 ring-2 ring-[var(--color-neon-blue)]/10;
+  }
+}
+
